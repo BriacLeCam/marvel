@@ -1,0 +1,24 @@
+main {
+  display: flex;
+  position: relative;
+  height: 100vh;
+
+  .home-container {
+    border: solid palevioletred 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../images/bg_5.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    button {
+      height: 250px;
+      width: 180px;
+      background-image: url(../images/paper_texture.jpeg);
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
