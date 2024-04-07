@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "../styles/home.scss";
 
 const Home = () => {
+  console.log(window.location.pathname);
+
   return (
     <main>
       <div className="home-container">

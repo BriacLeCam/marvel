@@ -24,14 +24,11 @@ const Signup = ({ handleToken }) => {
       //   Requête axios :
       // - Premier argument : l'url que j'interroge
       // - deuxième : le body que j'envoi
-      const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-        {
-          email: email,
-          username: username,
-          password: password,
-        }
-      );
+      const response = await axios.post("http://localhost:3000/user/signup", {
+        email: email,
+        username: username,
+        password: password,
+      });
       console.log("===> la réponse", response.data);
       //   Cookies.set("vinted-token", response.data.token, { expires: 15 });
       // J'enregistre le token dans mon state et mes cookies
@@ -85,13 +82,9 @@ const Signup = ({ handleToken }) => {
           }}
         />
         <input
-          checked={newsLetter}
-          type="checkbox"
-          onChange={() => {
-            setNewsLetter(!newsLetter);
-          }}
+          type="submit"
+          value="Signup to enter the Marvel Multiverse ⚡️"
         />
-        <input type="submit" value="S'inscrire" />
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </form>
       <Link to="/login">Tu as déjà un compte ? Connecte-toi !</Link>

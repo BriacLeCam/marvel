@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ThreeCircles } from "react-loader-spinner";
+import { Link } from "react-router-dom";
+import "../styles/characters.scss";
 
 const Characters = () => {
   const [charactersData, setCharactersData] = useState({});
@@ -31,23 +33,26 @@ const Characters = () => {
     />
   ) : (
     <main>
-      <h1>Characters</h1>
-      {charactersData.results.map((character) => {
-        const imageUrl = character.thumbnail.path;
-        const imageType = "portrait";
-        const imageSize = "medium";
-        const imageExtension = character.thumbnail.extension;
-        return (
-          <article key={character._id}>
-            <h2>{character.name}</h2>
-            <p>{character.description}</p>
-            <img
-              src={`${imageUrl}/${imageType}_${imageSize}.${imageExtension}`}
-              alt=""
-            />
-          </article>
-        );
-      })}
+      <div className="characters-wrap">
+        {charactersData.results.map((character) => {
+          const imageUrl = character.thumbnail.path;
+          const imageType = "portrait";
+          const imageSize = "medium";
+          const imageExtension = character.thumbnail.extension;
+          return (
+            <Link key={character._id} to={"home"} className="card-container">
+              <article>
+                <img
+                  src={`${imageUrl}/${imageType}_${imageSize}.${imageExtension}`}
+                  alt=""
+                />
+                <h2>{character.name}</h2>
+                <p>{character.description}</p>
+              </article>
+            </Link>
+          );
+        })}
+      </div>
     </main>
   );
 };

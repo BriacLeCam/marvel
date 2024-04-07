@@ -9,6 +9,7 @@ import Comics from "./pages/Comics";
 
 import Header from "./components/Header";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("marvel-token") || null);
@@ -30,8 +31,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
         <Route path="/comics" element={<Comics />} />
-        {/* <Route path="/signup" element={<Signup handleToken={handleToken} />} />
-        <Route path="/login" element={<Login handleToken={handleToken} />} /> */}
+        <Route path="/signup" element={<Signup handleToken={handleToken} />} />
+        <Route path="/login" element={<Login handleToken={handleToken} />} />
       </Routes>
     </Router>
   );
