@@ -46,14 +46,14 @@ const Characters = () => {
               className="card-container"
             >
               <article>
+                <div>
+                  <h2>{character.name}</h2>
+                </div>
                 <img
                   src={`${imageUrl}/${imageType}_${imageSize}.${imageExtension}`}
                   alt=""
                 />
-                <div>
-                  <h2>{character.name}</h2>
-                </div>
-                {/* <p>{character.description}</p> */}
+                <p>{character.description}</p>
               </article>
             </Link>
           );

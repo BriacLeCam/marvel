@@ -3,22 +3,23 @@ main {
 }
 
 .characters-wrap {
-  border: solid blue 1px;
+  // border: solid blue 1px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 90%;
+  width: 95%;
 }
 
 .card-container {
-  border: solid crimson 1px;
+  // border: solid crimson 1px;
   color: black;
+  border: solid black 2px;
   padding: 8px;
   cursor: pointer;
   width: 290px;
   height: 400px;
   overflow: hidden;
-  margin: 10px 10px 10px 10px;
+  margin: 14px 0px 14px 14px;
   border-top-left-radius: 20px;
   background-image: url("../images//paper_texture.jpeg");
   display: flex;
@@ -27,21 +28,21 @@ main {
   text-align: center;
 
   article {
-    border: solid green 2px;
+    // border: solid green 2px;
     height: 100%;
     width: 100%;
     font-family: "Bangers", system-ui;
 
-    img {
-      height: 100%;
-      object-fit: cover;
-      z-index: 2;
+    div {
+      // border: solid blue 2px;
+      height: 10%;
+      font-size: larger;
     }
 
-    div {
-      border: solid blue 2px;
-      height: 10%;
-      z-index: 1;
+    img {
+      height: 50%;
+      object-fit: cover;
+      border: solid black 1px;
     }
   }
 }
