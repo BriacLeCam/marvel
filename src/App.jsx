@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
+import Character from "./pages/Character";
 import Comics from "./pages/Comics";
 
 import Header from "./components/Header";
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/character/:_id" element={<Character />} />
         <Route path="/comics" element={<Comics />} />
         <Route path="/signup" element={<Signup handleToken={handleToken} />} />
         <Route path="/login" element={<Login handleToken={handleToken} />} />

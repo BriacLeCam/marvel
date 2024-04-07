@@ -28,8 +28,8 @@ const Characters = () => {
       width="80"
       ariaLabel="three-dots-loading"
       innerCircleColor="red"
-      middleCircleColor="black"
-      outerCircleColor="black"
+      middleCircleColor="white"
+      outerCircleColor="white"
     />
   ) : (
     <main>
@@ -40,7 +40,11 @@ const Characters = () => {
           const imageSize = "medium";
           const imageExtension = character.thumbnail.extension;
           return (
-            <Link key={character._id} to={"home"} className="card-container">
+            <Link
+              key={character._id}
+              to={`/character/${character._id}`}
+              className="card-container"
+            >
               <article>
                 <img
                   src={`${imageUrl}/${imageType}_${imageSize}.${imageExtension}`}
