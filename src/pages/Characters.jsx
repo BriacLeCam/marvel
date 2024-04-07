@@ -46,8 +46,10 @@ const Characters = () => {
                   src={`${imageUrl}/${imageType}_${imageSize}.${imageExtension}`}
                   alt=""
                 />
-                <h2>{character.name}</h2>
-                <p>{character.description}</p>
+                <div>
+                  <h2>{character.name}</h2>
+                </div>
+                {/* <p>{character.description}</p> */}
               </article>
             </Link>
           );

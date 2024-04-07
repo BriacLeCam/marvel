@@ -14,10 +14,12 @@
 
 .buttons-container {
   // border: solid red 2px;
-  width: 100%;
+  width: 90%;
   height: 90px;
+  border: solid black 2px;
+  border-top-right-radius: 20px;
   display: flex;
-  background-color: gray;
+  background-image: url("../images/paper_texture.jpeg");
 
   article {
     // border: solid blue 2px;
@@ -35,7 +37,9 @@
       margin-left: 40px;
       width: 120px;
       height: 40px;
-      background-image: url("/src/images/paper_texture.jpeg");
+      border-bottom-left-radius: 10px;
+      background-color: yellow;
+      font-family: "Bangers", system-ui;
     }
   }
 }
