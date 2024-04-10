@@ -24,11 +24,14 @@ const Signup = ({ handleToken }) => {
       //   Requête axios :
       // - Premier argument : l'url que j'interroge
       // - deuxième : le body que j'envoi
-      const response = await axios.post("http://localhost:3000/user/signup", {
-        email: email,
-        username: username,
-        password: password,
-      });
+      const response = await axios.post(
+        "site--marvel-backend--6826hc4vnxlk.code.run/user/signup",
+        {
+          email: email,
+          username: username,
+          password: password,
+        }
+      );
       console.log("===> la réponse", response.data);
       //   Cookies.set("vinted-token", response.data.token, { expires: 15 });
       // J'enregistre le token dans mon state et mes cookies

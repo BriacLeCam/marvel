@@ -17,7 +17,7 @@ const Character = () => {
         try {
           // const {data} = await axios.get();
           const response = await axios.get(
-            `http://localhost:3000/character/${_id}`
+            `site--marvel-backend--6826hc4vnxlk.code.run/character/${_id}`
           );
           console.log(response.data);
           setData(response.data);

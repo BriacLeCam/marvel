@@ -9,7 +9,9 @@ const Comics = () => {
   useEffect(() => {
     const fetchComicsData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/comics");
+        const { data } = await axios.get(
+          "site--marvel-backend--6826hc4vnxlk.code.run/comics"
+        );
         // console.log(data);
         setComicsData(data);
         setIsLoading(false);
