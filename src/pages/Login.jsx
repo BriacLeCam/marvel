@@ -12,7 +12,7 @@ const Login = ({ handleToken }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "site--marvel-backend--6826hc4vnxlk.code.run/user/login",
+        "https://site--marvel-backend--6826hc4vnxlk.code.run/user/login",
         {
           email: email,
           password: password,

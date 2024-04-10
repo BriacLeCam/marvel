@@ -10,7 +10,7 @@ const Comics = () => {
     const fetchComicsData = async () => {
       try {
         const { data } = await axios.get(
-          "site--marvel-backend--6826hc4vnxlk.code.run/comics"
+          "https://site--marvel-backend--6826hc4vnxlk.code.run/comics"
         );
         // console.log(data);
         setComicsData(data);

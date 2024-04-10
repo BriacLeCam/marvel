@@ -12,7 +12,7 @@ const Characters = () => {
     const fetchCharactersData = async () => {
       try {
         const { data } = await axios.get(
-          "site--marvel-backend--6826hc4vnxlk.code.run/characters"
+          "https://site--marvel-backend--6826hc4vnxlk.code.run/characters"
         );
         // console.log(data);
         setCharactersData(data);
